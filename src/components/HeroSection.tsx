@@ -27,7 +27,7 @@ export default function HeroSection() {
       </div>
 
       {/* Main Content Grid */}
-      <div className="max-w-7xl mt-10 mx-auto grid lg:grid-cols-2 gap-12 items-center relative z-10">
+      <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center relative z-10">
         {/* Left Side - Content */}
         <motion.div 
           style={{ opacity, scale }}
@@ -81,8 +81,8 @@ export default function HeroSection() {
               className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-4 group"
             >
               <div className="text-2xl mb-2 text-sky-400">⚡</div>
-              <h3 className="text-white font-semibold text-sm mb-1">Fast & Automated</h3>
-              <p className="text-gray-400 text-xs">Save time and labor costs</p>
+              <h3 className="text-white font-semibold text-sm mb-1">Save Time</h3>
+              <p className="text-gray-400 text-xs">Automate estimation process</p>
             </motion.div>
             
             <motion.div 
@@ -91,8 +91,8 @@ export default function HeroSection() {
               className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-4 group"
             >
               <div className="text-2xl mb-2 text-blue-500">🎯</div>
-              <h3 className="text-white font-semibold text-sm mb-1">Consistent Pricing</h3>
-              <p className="text-gray-400 text-xs">Ensure transparency</p>
+              <h3 className="text-white font-semibold text-sm mb-1">Consistency</h3>
+              <p className="text-gray-400 text-xs">Transparent pricing</p>
             </motion.div>
             
             <motion.div 

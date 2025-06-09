@@ -12,38 +12,38 @@ interface Feature {
 const features: Feature[] = [
   {
     icon: "⚡",
-    title: "Automate Cost Estimation",
-    description: "Automate the cost estimation process to save time and labor. Process engineering drawings in under 60 seconds.",
+    title: "60-Second Cost Estimates",
+    description: "Transform engineering drawings into accurate cost estimates in under 60 seconds. No more waiting days for quotes.",
     gradient: "from-sky-400 to-blue-500"
   },
   {
     icon: "🎯",
-    title: "Consistent & Transparent",
-    description: "Ensure consistency and transparency in your pricing across all projects and teams.",
+    title: "Consistent Pricing",
+    description: "Eliminate pricing variations between estimators. Ensure every quote follows the same rigorous methodology.",
     gradient: "from-blue-500 to-indigo-600"
   },
   {
     icon: "🔍",
-    title: "Detect Outliers",
-    description: "Detect cost outliers and inconsistencies in past human estimates with AI-powered analysis.",
+    title: "Quality Control",
+    description: "Automatically detect cost outliers and flag estimates that deviate from historical data patterns.",
     gradient: "from-indigo-600 to-blue-800"
   },
   {
     icon: "📈",
-    title: "Faster Quotes",
-    description: "Deliver faster, smarter quotes to your customers and win more business with competitive pricing.",
+    title: "Win More Business",
+    description: "Respond faster to RFQs with competitive, data-driven quotes. Close deals while competitors are still calculating.",
     gradient: "from-sky-400 to-blue-600"
   },
   {
     icon: "🏭",
-    title: "Manufacturing Focus",
-    description: "Specifically designed for manufacturers with engineering drawing workflows and manufacturing processes.",
+    title: "Manufacturing-Focused",
+    description: "Purpose-built for manufacturers. Understands machining, assembly, materials, and production processes.",
     gradient: "from-blue-500 to-indigo-700"
   },
   {
-    icon: "🔐",
-    title: "Enterprise Security",
-    description: "Built for enterprise scale with bank-level security protocols and data protection.",
+    icon: "🔒",
+    title: "Enterprise-Ready",
+    description: "Secure API integration, audit trails, and scalable architecture designed for manufacturing enterprises.",
     gradient: "from-indigo-600 to-blue-900"
   }
 ];
@@ -168,7 +168,7 @@ export default function FeaturesSection() {
           >
             <div className="w-2 h-2 bg-sky-400 rounded-full animate-pulse"></div>
             <span className="text-white/80 text-sm font-medium tracking-wide">
-              Enterprise-Grade Features
+              Built for Manufacturers
             </span>
           </motion.div>
 
@@ -180,10 +180,11 @@ export default function FeaturesSection() {
             viewport={{ once: true }}
             className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6"
           >
-            Powerful{" "}
+            Why{" "}
             <span className="bg-gradient-to-r from-sky-400 via-blue-500 to-indigo-600 bg-clip-text text-transparent">
-              API Features
+              Manufacturers
             </span>
+            {" "}Choose Us
           </motion.h2>
 
           {/* Subtitle */}
@@ -194,8 +195,8 @@ export default function FeaturesSection() {
             viewport={{ once: true }}
             className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed"
           >
-            Advanced machine learning technology combined with enterprise-level security 
-            and lightning-fast processing for professional cost estimation.
+            Transform your quoting process with AI that understands manufacturing. 
+            From drawings to estimates in seconds, not hours.
           </motion.p>
         </motion.div>
 
