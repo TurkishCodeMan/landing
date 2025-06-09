@@ -27,7 +27,7 @@ export default function HeroSection() {
       </div>
 
       {/* Main Content Grid */}
-      <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center relative z-10">
+      <div className="max-w-7xl mt-10 mx-auto grid lg:grid-cols-2 gap-12 items-center relative z-10">
         {/* Left Side - Content */}
         <motion.div 
           style={{ opacity, scale }}
