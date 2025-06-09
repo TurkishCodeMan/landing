@@ -41,13 +41,13 @@ export default function HeroSection() {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight"
           >
-            Transform Your{" "}
+            AI-powered cost estimation for{" "}
             <motion.span 
               className="relative inline-block"
               whileHover={{ scale: 1.02 }}
             >
               <span className="bg-gradient-to-r from-sky-400 via-blue-500 to-indigo-600 bg-clip-text text-transparent">
-                Technical Drawings
+                manufacturers
               </span>
               <motion.div
                 className="absolute -inset-2 bg-gradient-to-r from-sky-400/20 via-blue-500/20 to-indigo-600/20 rounded-lg blur-xl opacity-0"
@@ -55,7 +55,7 @@ export default function HeroSection() {
                 transition={{ duration: 0.2 }}
               />
             </motion.span>
-            {" "}Into Instant Cost Estimates
+            {" "}— fast, consistent, scalable.
           </motion.h1>
           
           <motion.p
@@ -64,9 +64,8 @@ export default function HeroSection() {
             transition={{ duration: 0.5, delay: 0.15 }}
             className="text-lg md:text-xl text-gray-300 leading-relaxed max-w-xl mx-auto lg:mx-0"
           >
-            Upload your DWG or PNG files and get precise cost estimations in seconds. 
-            Our advanced machine learning API delivers professional-grade accuracy 
-            with enterprise-level security.
+            Generate cost estimates from engineering drawings using AI — in under 60 seconds. 
+            Deliver faster, smarter quotes to your customers.
           </motion.p>
 
           {/* Feature highlights */}
@@ -82,8 +81,8 @@ export default function HeroSection() {
               className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-4 group"
             >
               <div className="text-2xl mb-2 text-sky-400">⚡</div>
-              <h3 className="text-white font-semibold text-sm mb-1">Lightning Fast</h3>
-              <p className="text-gray-400 text-xs">Get results in seconds</p>
+              <h3 className="text-white font-semibold text-sm mb-1">Fast & Automated</h3>
+              <p className="text-gray-400 text-xs">Save time and labor costs</p>
             </motion.div>
             
             <motion.div 
@@ -92,8 +91,8 @@ export default function HeroSection() {
               className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-4 group"
             >
               <div className="text-2xl mb-2 text-blue-500">🎯</div>
-              <h3 className="text-white font-semibold text-sm mb-1">Precise Accuracy</h3>
-              <p className="text-gray-400 text-xs">AI-driven calculations</p>
+              <h3 className="text-white font-semibold text-sm mb-1">Consistent Pricing</h3>
+              <p className="text-gray-400 text-xs">Ensure transparency</p>
             </motion.div>
             
             <motion.div 
@@ -101,9 +100,9 @@ export default function HeroSection() {
               transition={{ duration: 0.2 }}
               className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-4 group"
             >
-              <div className="text-2xl mb-2 text-indigo-600">🔒</div>
-              <h3 className="text-white font-semibold text-sm mb-1">Enterprise Security</h3>
-              <p className="text-gray-400 text-xs">Data stays protected</p>
+              <div className="text-2xl mb-2 text-indigo-600">🔍</div>
+              <h3 className="text-white font-semibold text-sm mb-1">Detect Outliers</h3>
+              <p className="text-gray-400 text-xs">Find inconsistencies</p>
             </motion.div>
           </motion.div>
 

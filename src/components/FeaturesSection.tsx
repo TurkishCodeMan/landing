@@ -11,39 +11,39 @@ interface Feature {
 
 const features: Feature[] = [
   {
-    icon: "🖼️",
-    title: "Image Analysis",
-    description: "AI-powered automatic cost estimation from PNG and technical drawing files.",
+    icon: "⚡",
+    title: "Automate Cost Estimation",
+    description: "Automate the cost estimation process to save time and labor. Process engineering drawings in under 60 seconds.",
     gradient: "from-sky-400 to-blue-500"
   },
   {
-    icon: "📐",
-    title: "DXF Processing",
-    description: "Extract precise features from DXF files for accurate cost predictions.",
+    icon: "🎯",
+    title: "Consistent & Transparent",
+    description: "Ensure consistency and transparency in your pricing across all projects and teams.",
     gradient: "from-blue-500 to-indigo-600"
   },
   {
-    icon: "🔄",
-    title: "Multimodal Estimation",
-    description: "Combine multiple file formats for enhanced accuracy and reliability.",
+    icon: "🔍",
+    title: "Detect Outliers",
+    description: "Detect cost outliers and inconsistencies in past human estimates with AI-powered analysis.",
     gradient: "from-indigo-600 to-blue-800"
+  },
+  {
+    icon: "📈",
+    title: "Faster Quotes",
+    description: "Deliver faster, smarter quotes to your customers and win more business with competitive pricing.",
+    gradient: "from-sky-400 to-blue-600"
+  },
+  {
+    icon: "🏭",
+    title: "Manufacturing Focus",
+    description: "Specifically designed for manufacturers with engineering drawing workflows and manufacturing processes.",
+    gradient: "from-blue-500 to-indigo-700"
   },
   {
     icon: "🔐",
     title: "Enterprise Security",
-    description: "JWT-based authentication with bank-level security protocols.",
-    gradient: "from-sky-400 to-blue-600"
-  },
-  {
-    icon: "⚡",
-    title: "Lightning Fast",
-    description: "Get precise cost estimations in seconds, not hours or days.",
-    gradient: "from-blue-500 to-indigo-700"
-  },
-  {
-    icon: "🏗️",
-    title: "Scalable Architecture",
-    description: "Built for enterprise scale with modular, maintainable code structure.",
+    description: "Built for enterprise scale with bank-level security protocols and data protection.",
     gradient: "from-indigo-600 to-blue-900"
   }
 ];
