@@ -2,8 +2,11 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { useTranslate } from "@/hooks/useTranslate";
 
 export default function TechnologySection() {
+  const { t } = useTranslate();
+  
   return (
     <section className="py-20 px-4 bg-gray-900 overflow-hidden">
       <div className="max-w-7xl mx-auto">
@@ -15,10 +18,10 @@ export default function TechnologySection() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            How It Works?
+            {t('technology.title')}
           </h2>
           <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-Simply upload a DWG or PNG drawing. Our AI model analyzes the design, extracts key features and delivers an accurate cost estimate within seconds.
+            {t('technology.subtitle')}
           </p>
         </motion.div>
 
@@ -61,7 +64,7 @@ Simply upload a DWG or PNG drawing. Our AI model analyzes the design, extracts k
               >
                 PNG File
               </motion.div>
-              <div className="text-gray-400 text-sm">Input</div>
+              <div className="text-gray-400 text-sm">{t('technology.steps.input')}</div>
             </motion.div>
 
             {/* Arrow 1 */}
@@ -159,7 +162,7 @@ Simply upload a DWG or PNG drawing. Our AI model analyzes the design, extracts k
               >
                 AI Analysis
               </motion.div>
-              <div className="text-gray-400 text-sm">Processing</div>
+              <div className="text-gray-400 text-sm">{t('technology.steps.processing')}</div>
             </motion.div>
 
             {/* Arrow 2 */}
@@ -262,9 +265,9 @@ Simply upload a DWG or PNG drawing. Our AI model analyzes the design, extracts k
                 transition={{ delay: 1.1 }}
                 className="text-white text-lg font-semibold"
               >
-                Cost Estimation
+                {t('technology.steps.costEstimation')}
               </motion.div>
-              <div className="text-gray-400 text-sm">Output</div>
+              <div className="text-gray-400 text-sm">{t('technology.steps.output')}</div>
             </motion.div>
           </div>
 

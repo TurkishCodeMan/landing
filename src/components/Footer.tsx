@@ -2,8 +2,11 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { useTranslate } from "@/hooks/useTranslate";
 
 export default function Footer() {
+  const { t } = useTranslate();
+  
   return (
     <footer className="relative bg-slate-900 text-white overflow-hidden">
       <div className="relative py-16 px-4">
@@ -27,7 +30,7 @@ export default function Footer() {
                 viewport={{ once: true }}
                 className="text-3xl md:text-4xl font-bold text-white mb-8"
               >
-                Cost Estimation in 60 Seconds
+                {t('footer.title')}
               </motion.h2>
               
               {/* Contact Section */}
@@ -37,10 +40,10 @@ export default function Footer() {
                 transition={{ duration: 0.6, delay: 0.2 }}
                 viewport={{ once: true }}
               >
-                <h3 className="text-xl font-semibold text-white mb-4">Contact Us</h3>
+                <h3 className="text-xl font-semibold text-white mb-4">{t('footer.contact')}</h3>
                 <div className="space-y-2 text-gray-300">
-                  <p>Boğaziçi Teknopark</p>
-                  <p>2/5, 108 Sarıyer, İstanbul</p>
+                  <p>{t('footer.address1')}</p>
+                  <p>{t('footer.address2')}</p>
                 </div>
               </motion.div>
             </motion.div>

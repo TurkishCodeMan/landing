@@ -3,10 +3,12 @@
 import Image from "next/image";
 import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
 import { useRef, useState } from "react";
+import { useTranslate } from "@/hooks/useTranslate";
 
 export default function HeroSection() {
   const containerRef = useRef<HTMLDivElement>(null);
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  const { t } = useTranslate();
   
   const { scrollYProgress } = useScroll({
     target: containerRef,
@@ -41,13 +43,13 @@ export default function HeroSection() {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="text-4xl md:text-4xl lg:text-5xl font-bold text-white leading-tight"
           >
-            AI-powered cost estimation for{" "}
+            {t('hero.title')}{" "}
             <motion.span 
               className="relative inline-block"
               whileHover={{ scale: 1.02 }}
             >
               <span className="bg-gradient-to-r from-sky-400 via-blue-500 to-indigo-600 bg-clip-text text-transparent">
-                manufacturers
+                {t('hero.titleHighlight')}
               </span>
               <motion.div
                 className="absolute -inset-2 bg-gradient-to-r from-sky-400/20 via-blue-500/20 to-indigo-600/20 rounded-lg blur-xl opacity-0"
@@ -55,7 +57,7 @@ export default function HeroSection() {
                 transition={{ duration: 0.2 }}
               />
             </motion.span>
-            {" "}— fast, consistent, scalable.
+            {" "}{t('hero.titleEnd')}
           </motion.h1>
           
           <motion.p
@@ -64,8 +66,7 @@ export default function HeroSection() {
             transition={{ duration: 0.5, delay: 0.15 }}
             className="text-lg md:text-xl text-gray-300 leading-relaxed max-w-xl mx-auto lg:mx-0"
           >
-            Generate cost estimates from engineering drawings using AI — in under 60 seconds. 
-            Deliver faster, smarter quotes to your customers.
+            {t('hero.subtitle')}
           </motion.p>
 
           {/* Feature highlights */}
@@ -88,7 +89,7 @@ export default function HeroSection() {
               className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-semibold px-8 py-4 rounded-xl shadow-lg transition-all duration-300 border border-blue-500/30"
             >
               <span className="flex items-center gap-3">
-                <span>Request A Demo</span>
+                <span>{t('hero.requestDemo')}</span>
                 <motion.span
                   animate={{ x: [0, 5, 0] }}
                   transition={{ 
@@ -119,7 +120,7 @@ export default function HeroSection() {
                 scale: 1.05,
                 transition: { duration: 0.2 }
               }}
-              onClick={() => setSelectedImage("/image_1.png")}
+              onClick={() => setSelectedImage("/animated gif 3sn.gif")}
               className="relative cursor-pointer"
             >
               <div className="absolute inset-0 bg-gradient-to-br from-sky-400/30 to-blue-600/30 rounded-2xl blur-xl"></div>
@@ -132,7 +133,7 @@ export default function HeroSection() {
                 }}
               >
                 <Image 
-                  src="/image_1.png" 
+                  src="/animated gif 3sn.gif" 
                   alt="Technical Drawing Sample" 
                   width={400} 
                   height={300} 
@@ -142,44 +143,7 @@ export default function HeroSection() {
             </motion.div>
 
             {/* Secondary Image */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.7 }}
-              animate={{ 
-                opacity: 0.9,
-                scale: 1
-              }}
-              transition={{ 
-                opacity: { duration: 0.8, delay: 0.6 },
-                scale: { duration: 0.8, delay: 0.6 }
-              }}
-              whileHover={{ 
-                scale: 1.1,
-                zIndex: 50,
-                transition: { duration: 0.2 }
-              }}
-              onClick={() => setSelectedImage("/image_2.png")}
-              className="absolute -bottom-6 -right-6 cursor-pointer"
-            >
-              <div className="relative">
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-500/25 to-indigo-700/25 rounded-xl blur-lg"></div>
-                <motion.div 
-                  className="relative bg-white/15 backdrop-blur-md border border-white/25 rounded-xl p-3 shadow-xl"
-                  whileHover={{ 
-                    boxShadow: "0 20px 40px -12px rgba(79, 70, 229, 0.4)",
-                    borderColor: "rgba(99, 102, 241, 0.6)",
-                    transition: { duration: 0.2 }
-                  }}
-                >
-                  <Image 
-                    src="/image_2.png" 
-                    alt="Engineering Drawing" 
-                    width={180} 
-                    height={140} 
-                    className="rounded-lg shadow-lg w-full h-auto"
-                  />
-                </motion.div>
-              </div>
-            </motion.div>
+         
           </div>
         </motion.div>
       </div>
@@ -253,8 +217,8 @@ export default function HeroSection() {
                   </h3>
                   <p className="text-gray-300 text-lg">
                     {selectedImage.includes('image_1') 
-                      ? 'Upload similar technical drawings to get instant cost estimations'
-                      : 'Detailed engineering drawings processed with AI precision'
+                      ? t('hero.uploadSimilar')
+                      : t('hero.detailedEngineering')
                     }
                   </p>
                   

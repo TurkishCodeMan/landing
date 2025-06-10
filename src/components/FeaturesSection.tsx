@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from "framer-motion";
+import { useTranslate } from "@/hooks/useTranslate";
 
 interface Feature {
   icon: string;
@@ -8,45 +9,6 @@ interface Feature {
   description: string;
   gradient: string;
 }
-
-const features: Feature[] = [
-  {
-    icon: "⚡",
-    title: "60-Second Cost Estimation",
-    description: "Transform engineering drawings into accurate cost estimates in under 60 seconds. No more waiting week for quotes.",
-    gradient: "from-sky-400 to-blue-500"
-  },
-  {
-    icon: "🎯",
-    title: "Consistent Pricing",
-    description: "Standardize cost estimates with AI to support a consistent pricing policy.",
-    gradient: "from-blue-500 to-indigo-600"
-  },
-  {
-    icon: "🔍",
-    title: "Outlier Detection",
-    description: "Detect anomalies in past cost estimates made by humans.",
-    gradient: "from-indigo-600 to-blue-800"
-  },
-  {
-    icon: "📈",
-    title: "Win More Business",
-    description: "Respond faster to Request for Quotations with competitive, data-driven quotes. Close deals while competitors are still calculating.",
-    gradient: "from-sky-400 to-blue-600"
-  },
-  {
-    icon: "🏭",
-    title: "Manufacturing-Focused",
-    description: "Purpose-built for manufacturers. Understands machining, assembly, materials and production processes.",
-    gradient: "from-blue-500 to-indigo-700"
-  },
-  {
-    icon: "🔒",
-    title: "On-Premise or Cloud — You Choose",
-    description: "Deployable both on-premise and in the cloud. Choose full local installation for maximum data security.",
-    gradient: "from-indigo-600 to-blue-900"
-  }
-];
 
 function FeatureCard({ feature, index }: { feature: Feature; index: number }) {
   return (
@@ -74,45 +36,27 @@ function FeatureCard({ feature, index }: { feature: Feature; index: number }) {
       {/* Card Content */}
       <div className="relative p-8 h-full flex flex-col">
         {/* Icon with animated background */}
-        <motion.div
-          whileHover={{ 
-            scale: 1.2,
-            rotate: [0, -10, 10, 0],
-            transition: { duration: 0.6 }
-          }}
-          className="relative mb-6 hidden"
-        >
-          <div className={`absolute inset-0 bg-gradient-to-br ${feature.gradient} rounded-2xl blur-xl opacity-20 scale-150`}></div>
-          <div className={`relative w-16 h-16 bg-gradient-to-br ${feature.gradient} rounded-2xl flex items-center justify-center text-2xl backdrop-blur-sm border border-white/20 shadow-lg`}>
-            {feature.icon}
-          </div>
-        </motion.div>
+    
 
         {/* Title */}
-        <motion.h3
-          initial={{ opacity: 0, x: -20 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6, delay: index * 0.1 + 0.2 }}
-          viewport={{ once: true }}
-          className="text-2xl font-bold text-white mb-4 group-hover:text-sky-300 transition-colors duration-300"
+        <motion.h3 
+          className="text-xl font-bold text-white mb-4 flex-grow-0"
+          whileHover={{ x: 5 }}
         >
           {feature.title}
         </motion.h3>
 
         {/* Description */}
-        <motion.p
-          initial={{ opacity: 0, x: -20 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6, delay: index * 0.1 + 0.3 }}
-          viewport={{ once: true }}
-          className="text-gray-300 leading-relaxed flex-grow group-hover:text-gray-200 transition-colors duration-300"
-        >
+        <p className="text-gray-300 leading-relaxed text-sm flex-grow">
           {feature.description}
-        </motion.p>
+        </p>
 
-        {/* Hover effect line */}
+        {/* Hover indicator */}
         <motion.div
-          className={`absolute bottom-0 left-0 h-1 bg-gradient-to-r ${feature.gradient} transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left rounded-full`}
+          initial={{ width: 0 }}
+          whileHover={{ width: "100%" }}
+          transition={{ duration: 0.3 }}
+          className={`h-1 bg-gradient-to-r ${feature.gradient} rounded-full mt-6 opacity-0 group-hover:opacity-100`}
         />
       </div>
     </motion.div>
@@ -120,6 +64,23 @@ function FeatureCard({ feature, index }: { feature: Feature; index: number }) {
 }
 
 export default function FeaturesSection() {
+  const { t } = useTranslate();
+  
+  // Get features from translations
+  const features: Feature[] = t('features.list').map((feature: any, index: number) => ({
+    icon: ["⚡", "🎯", "🔍", "📈", "🏭", "🔒"][index],
+    title: feature.title,
+    description: feature.description,
+    gradient: [
+      "from-sky-400 to-blue-500",
+      "from-blue-500 to-indigo-600", 
+      "from-indigo-600 to-blue-800",
+      "from-sky-400 to-blue-600",
+      "from-blue-500 to-indigo-700",
+      "from-indigo-600 to-blue-900"
+    ][index]
+  }));
+
   return (
     <section className="py-20 px-4 bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 relative overflow-hidden">
       {/* Background Effects */}
@@ -168,7 +129,7 @@ export default function FeaturesSection() {
           >
             <div className="w-2 h-2 bg-sky-400 rounded-full animate-pulse"></div>
             <span className="text-white/80 text-sm font-medium tracking-wide">
-              Built for Manufacturers
+              {t('features.badge')}
             </span>
           </motion.div>
 
@@ -180,11 +141,11 @@ export default function FeaturesSection() {
             viewport={{ once: true }}
             className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6"
           >
-            Why{" "}
+            {t('features.title')}{" "}
             <span className="bg-gradient-to-r from-sky-400 via-blue-500 to-indigo-600 bg-clip-text text-transparent">
-              Manufacturers
+              {t('features.titleHighlight')}
             </span>
-            {" "}Choose Us
+            {" "}{t('features.titleEnd')}
           </motion.h2>
 
           {/* Subtitle */}
@@ -195,11 +156,11 @@ export default function FeaturesSection() {
             viewport={{ once: true }}
             className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed"
           >
-            Transform your quoting process with AI that understands manufacturing. 
-            From drawings to estimates in seconds, not hours.
+            {t('features.subtitle')}
           </motion.p>
         </motion.div>
 
+        {/* Features Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {features.map((feature, index) => (
             <FeatureCard key={index} feature={feature} index={index} />
