@@ -67,7 +67,7 @@ export default function FeaturesSection() {
   const { t } = useTranslate();
   
   // Get features from translations
-  const features: Feature[] = t('features.list').map((feature: any, index: number) => ({
+  const features: Feature[] = t('features.list').map((feature: { title: string; description: string }, index: number) => ({
     icon: ["⚡", "🎯", "🔍", "📈", "🏭", "🔒"][index],
     title: feature.title,
     description: feature.description,

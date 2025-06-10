@@ -150,11 +150,11 @@ const translations = {
 };
 
 type Language = 'en' | 'tr';
-type TranslationKey = keyof typeof translations.en;
 
 interface LanguageStore {
   language: Language;
   setLanguage: (lang: Language) => void;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   t: (key: string) => any;
 }
 
@@ -165,6 +165,7 @@ const useLanguageStore = create<LanguageStore>((set, get) => ({
   t: (key: string) => {
     const { language } = get();
     const keys = key.split('.');
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     let result: any = translations[language];
     
     for (const k of keys) {
@@ -172,7 +173,8 @@ const useLanguageStore = create<LanguageStore>((set, get) => ({
         result = result[k];
       } else {
         // Fallback to English if key not found
-        result = translations.en;
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        result = translations.en as any;
         for (const fallbackKey of keys) {
           if (result && typeof result === 'object' && fallbackKey in result) {
             result = result[fallbackKey];
