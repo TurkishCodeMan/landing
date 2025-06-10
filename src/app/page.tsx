@@ -14,9 +14,9 @@ export default function Home() {
       <Navigation />
       <HeroSection />
       <FeaturesSection />
-      <HowItWorksSection />
+      {/* <HowItWorksSection /> */}
       <TechnologySection />
-      <CTASection />
+      {/* <CTASection /> */}
       <Footer />
     </div>
   );
