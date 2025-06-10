@@ -142,10 +142,10 @@ export default function FeaturesSection() {
             className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6"
           >
             {t('features.title')}{" "}
-            <span className="bg-gradient-to-r from-sky-400 via-blue-500 to-indigo-600 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r  from-sky-400 via-blue-500 to-indigo-600 bg-clip-text text-transparent">
               {t('features.titleHighlight')}
             </span>
-            {" "}{t('features.titleEnd')}
+            <span className="">{t('features.titleEnd')}</span>
           </motion.h2>
 
           {/* Subtitle */}
@@ -157,6 +157,15 @@ export default function FeaturesSection() {
             className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed"
           >
             {t('features.subtitle')}
+          </motion.p>
+            <motion.p
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            viewport={{ once: true }}
+            className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed"
+          >
+            {t('features.subtitleEnd')}
           </motion.p>
         </motion.div>
 

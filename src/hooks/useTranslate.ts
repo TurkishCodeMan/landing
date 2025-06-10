@@ -13,7 +13,7 @@ const translations = {
       title: 'AI-powered cost estimation for',
       titleHighlight: 'manufacturers',
       titleEnd: '— fast, consistent, scalable.',
-      subtitle: 'Generate cost estimates from engineering drawings using AI — in under 60 seconds. Deliver faster, smarter quotes to your customers.',
+      subtitle: 'Generate cost estimates from engineering drawings using AI  in under 60 seconds. Deliver faster, smarter quotes to your customers.',
       requestDemo: 'Request a Demo',
       uploadSimilar: 'Upload similar technical drawings to get instant cost estimations',
       detailedEngineering: 'Detailed engineering drawings processed with AI precision'
@@ -25,11 +25,12 @@ const translations = {
       title: 'Why',
       titleHighlight: 'Manufacturers',
       titleEnd: 'Choose Us',
-      subtitle: 'Transform your quoting process with AI that understands manufacturing. From drawings to estimates in seconds, not weeks.',
+      subtitle: 'Transform your quoting process with AI that understands manufacturing',
+    subtitleEnd: 'From drawings to estimates in seconds, not weeks.',
       list: [
         {
           title: '60-Second Cost Estimation',
-          description: 'Transform engineering drawings into accurate cost estimates in under 60 seconds. No more waiting week for quotes.'
+          description: 'Transform engineering drawings into accurate cost estimates in under 60 seconds. No more waiting weeks for quotes.'
         },
         {
           title: 'Consistent Pricing',
@@ -59,7 +60,7 @@ const translations = {
       title: 'How It Works?',
       subtitle: 'Simply upload a DWG or PNG drawing. Our AI model analyzes the design, extracts key features and delivers an accurate cost estimate within seconds.',
       steps: {
-        input: 'Input',
+        input: 'DWG/PNG File',
         processing: 'Processing',
         output: 'Output',
         costEstimation: 'Cost Estimation'
@@ -97,7 +98,8 @@ const translations = {
       title: 'Neden',
       titleHighlight: 'Üreticiler',
       titleEnd: 'Bizi Tercih Ediyor',
-      subtitle: 'Üretimi anlayan AI ile teklif verme sürecinizi dönüştürün. Çizimlerden tahminlere haftalar değil saniyeler içinde.',
+      subtitle: 'Üretimi anlayan AI ile teklif verme sürecinizi dönüştürün.',
+      subtitleEnd: 'Çizimlerden tahminlere saniyeler içinde, haftalar değil.',
       list: [
         {
           title: '60 Saniyede Maliyet Tahmini',

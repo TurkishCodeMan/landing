@@ -125,7 +125,7 @@ export default function HeroSection() {
             >
               <div className="absolute inset-0 bg-gradient-to-br from-sky-400/30 to-blue-600/30 rounded-2xl blur-xl"></div>
               <motion.div 
-                className="relative bg-white/10 backdrop-blur-md border border-white/30 rounded-2xl p-6 shadow-2xl"
+                className="relative bg-white/10 backdrop-blur-md border border-white/30 rounded-2xl p-3 shadow-2xl"
                 whileHover={{ 
                   boxShadow: "0 25px 50px -12px rgba(59, 130, 246, 0.5)",
                   borderColor: "rgba(56, 189, 248, 0.6)",
@@ -135,8 +135,8 @@ export default function HeroSection() {
                 <Image 
                   src="/animated gif 3sn.gif" 
                   alt="Technical Drawing Sample" 
-                  width={400} 
-                  height={300} 
+                  width={800} 
+                  height={800} 
                   className="rounded-xl shadow-lg w-full h-auto"
                 />
               </motion.div>
