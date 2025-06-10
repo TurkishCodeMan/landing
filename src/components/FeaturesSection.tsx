@@ -12,38 +12,38 @@ interface Feature {
 const features: Feature[] = [
   {
     icon: "⚡",
-    title: "60-Second Cost Estimates",
-    description: "Transform engineering drawings into accurate cost estimates in under 60 seconds. No more waiting days for quotes.",
+    title: "60-Second Cost Estimation",
+    description: "Transform engineering drawings into accurate cost estimates in under 60 seconds. No more waiting week for quotes.",
     gradient: "from-sky-400 to-blue-500"
   },
   {
     icon: "🎯",
     title: "Consistent Pricing",
-    description: "Eliminate pricing variations between estimators. Ensure every quote follows the same rigorous methodology.",
+    description: "Standardize cost estimates with AI to support a consistent pricing policy.",
     gradient: "from-blue-500 to-indigo-600"
   },
   {
     icon: "🔍",
-    title: "Quality Control",
-    description: "Automatically detect cost outliers and flag estimates that deviate from historical data patterns.",
+    title: "Outlier Detection",
+    description: "Detect anomalies in past cost estimates made by humans.",
     gradient: "from-indigo-600 to-blue-800"
   },
   {
     icon: "📈",
     title: "Win More Business",
-    description: "Respond faster to RFQs with competitive, data-driven quotes. Close deals while competitors are still calculating.",
+    description: "Respond faster to Request for Quotations with competitive, data-driven quotes. Close deals while competitors are still calculating.",
     gradient: "from-sky-400 to-blue-600"
   },
   {
     icon: "🏭",
     title: "Manufacturing-Focused",
-    description: "Purpose-built for manufacturers. Understands machining, assembly, materials, and production processes.",
+    description: "Purpose-built for manufacturers. Understands machining, assembly, materials and production processes.",
     gradient: "from-blue-500 to-indigo-700"
   },
   {
     icon: "🔒",
-    title: "Enterprise-Ready",
-    description: "Secure API integration, audit trails, and scalable architecture designed for manufacturing enterprises.",
+    title: "On-Premise or Cloud — You Choose",
+    description: "Deployable both on-premise and in the cloud. Choose full local installation for maximum data security.",
     gradient: "from-indigo-600 to-blue-900"
   }
 ];
@@ -80,7 +80,7 @@ function FeatureCard({ feature, index }: { feature: Feature; index: number }) {
             rotate: [0, -10, 10, 0],
             transition: { duration: 0.6 }
           }}
-          className="relative mb-6"
+          className="relative mb-6 hidden"
         >
           <div className={`absolute inset-0 bg-gradient-to-br ${feature.gradient} rounded-2xl blur-xl opacity-20 scale-150`}></div>
           <div className={`relative w-16 h-16 bg-gradient-to-br ${feature.gradient} rounded-2xl flex items-center justify-center text-2xl backdrop-blur-sm border border-white/20 shadow-lg`}>

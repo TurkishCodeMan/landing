@@ -18,7 +18,7 @@ export default function TechnologySection() {
             How It Works?
           </h2>
           <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-            Your PNG file is taken as input, our AI model analyzes it and generates cost estimation
+Simply upload a DWG or PNG drawing. Our AI model analyzes the design, extracts key features and delivers an accurate cost estimate within seconds.
           </p>
         </motion.div>
 
@@ -46,10 +46,10 @@ export default function TechnologySection() {
                 className="bg-gradient-to-br from-blue-500 to-purple-600 p-6 rounded-2xl shadow-2xl mb-4"
               >
                 <Image 
-                  src="/image_1.png" 
+                  src="/tt.jpg" 
                   alt="Technical Drawing Input" 
-                  width={120} 
-                  height={120} 
+                  width={160} 
+                  height={160} 
                   className="rounded-lg"
                 />
               </motion.div>
@@ -95,16 +95,21 @@ export default function TechnologySection() {
             >
               <motion.div
                 animate={{ 
-                  rotate: 360,
                   scale: [1, 1.1, 1]
                 }}
                 transition={{ 
-                  rotate: { duration: 8, repeat: Infinity, ease: "linear" },
                   scale: { duration: 2, repeat: Infinity, ease: "easeInOut" }
                 }}
-                className="bg-gradient-to-br from-purple-600 to-pink-600 p-8 rounded-full shadow-2xl mb-4 relative"
+                className="bg-gradient-to-br from-purple-600 to-pink-600 p-4 rounded-lg shadow-2xl mb-4 relative overflow-hidden"
               >
-                <div className="text-4xl">🤖</div>
+                <Image 
+                  src="/animated gif 3sn.gif" 
+                  alt="AI Processing Animation" 
+                  width={200} 
+                  height={200} 
+                  className="rounded-md"
+                  unoptimized
+                />
                 
                 {/* Processing particles */}
                 <motion.div
@@ -113,11 +118,11 @@ export default function TechnologySection() {
                     opacity: [0, 1, 0]
                   }}
                   transition={{ 
-                    duration: 1.5,
+                    duration: 1,
                     repeat: Infinity,
                     ease: "easeInOut"
                   }}
-                  className="absolute -top-2 -right-2 w-4 h-4 bg-yellow-400 rounded-full"
+                  className="absolute -top-2 -right-2 w-4 h-4 bg-yellow-400 rounded-lg"
                 />
                 <motion.div
                   animate={{ 
@@ -130,7 +135,7 @@ export default function TechnologySection() {
                     ease: "easeInOut",
                     delay: 0.5
                   }}
-                  className="absolute -bottom-2 -left-2 w-3 h-3 bg-green-400 rounded-full"
+                  className="absolute -bottom-2 -left-2 w-3 h-3 bg-green-400 rounded-lg"
                 />
                 <motion.div
                   animate={{ 
@@ -143,7 +148,7 @@ export default function TechnologySection() {
                     ease: "easeInOut",
                     delay: 1
                   }}
-                  className="absolute top-0 -left-3 w-2 h-2 bg-blue-400 rounded-full"
+                  className="absolute top-0 -left-3 w-2 h-2 bg-blue-400 rounded-lg"
                 />
               </motion.div>
               <motion.div
@@ -213,9 +218,9 @@ export default function TechnologySection() {
                     repeat: Infinity,
                     ease: "easeInOut"
                   }}
-                  className="text-6xl font-bold text-white"
+                  className="text-4xl font-bold text-white"
                 >
-                  ₺
+                 2.3 €
                 </motion.div>
                 
                 {/* Money particles */}
@@ -291,29 +296,7 @@ export default function TechnologySection() {
           </div>
         </div>
 
-        {/* Process Description */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 1.5 }}
-          viewport={{ once: true }}
-          className="text-center mt-16"
-        >
-          <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-            <div className="bg-white/5 backdrop-blur-sm p-6 rounded-xl border border-white/10">
-              <h3 className="text-white font-semibold text-lg mb-2">1. File Upload</h3>
-              <p className="text-gray-400 text-sm leading-relaxed">Upload your technical drawing to the system</p>
-            </div>
-            <div className="bg-white/5 backdrop-blur-sm p-6 rounded-xl border border-white/10">
-              <h3 className="text-white font-semibold text-lg mb-2">2. AI Analysis</h3>
-              <p className="text-gray-400 text-sm leading-relaxed">AI model analyzes your image and extracts features</p>
-            </div>
-            <div className="bg-white/5 backdrop-blur-sm p-6 rounded-xl border border-white/10">
-              <h3 className="text-white font-semibold text-lg mb-2">3. Cost Calculation</h3>
-              <p className="text-gray-400 text-sm leading-relaxed">Precise cost estimation is generated based on analysis results</p>
-            </div>
-          </div>
-        </motion.div>
+
       </div>
     </section>
   );

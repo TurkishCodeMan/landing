@@ -27,11 +27,11 @@ export default function HeroSection() {
       </div>
 
       {/* Main Content Grid */}
-      <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center relative z-10">
+      <div className="max-w-7xl mt-6 mx-auto grid lg:grid-cols-2 gap-12 items-center relative z-10">
         {/* Left Side - Content */}
         <motion.div 
           style={{ opacity, scale }}
-          className="space-y-8 text-center lg:text-left"
+          className="space-y-4 text-center lg:text-left"
         >
       
 
@@ -39,7 +39,7 @@ export default function HeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight"
+            className="text-4xl md:text-4xl lg:text-5xl font-bold text-white leading-tight"
           >
             AI-powered cost estimation for{" "}
             <motion.span 
@@ -69,44 +69,39 @@ export default function HeroSection() {
           </motion.p>
 
           {/* Feature highlights */}
+     
+
+          {/* CTA Button */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            className="grid grid-cols-3 gap-4 justify-items-center lg:justify-items-start"
+            transition={{ duration: 0.5, delay: 0.25 }}
+            className="flex justify-center lg:justify-start"
           >
-            <motion.div 
-              whileHover={{ scale: 1.03, y: -3 }}
-              transition={{ duration: 0.2 }}
-              className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-4 group"
+            <motion.button
+              whileHover={{ 
+                scale: 1.05,
+                boxShadow: "0 20px 40px rgba(59, 130, 246, 0.4)",
+                backgroundColor: "#2563eb"
+              }}
+              whileTap={{ scale: 0.95 }}
+              className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-semibold px-8 py-4 rounded-xl shadow-lg transition-all duration-300 border border-blue-500/30"
             >
-              <div className="text-2xl mb-2 text-sky-400">⚡</div>
-              <h3 className="text-white font-semibold text-sm mb-1">Save Time</h3>
-              <p className="text-gray-400 text-xs">Automate estimation process</p>
-            </motion.div>
-            
-            <motion.div 
-              whileHover={{ scale: 1.03, y: -3 }}
-              transition={{ duration: 0.2 }}
-              className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-4 group"
-            >
-              <div className="text-2xl mb-2 text-blue-500">🎯</div>
-              <h3 className="text-white font-semibold text-sm mb-1">Consistency</h3>
-              <p className="text-gray-400 text-xs">Transparent pricing</p>
-            </motion.div>
-            
-            <motion.div 
-              whileHover={{ scale: 1.03, y: -3 }}
-              transition={{ duration: 0.2 }}
-              className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-4 group"
-            >
-              <div className="text-2xl mb-2 text-indigo-600">🔍</div>
-              <h3 className="text-white font-semibold text-sm mb-1">Detect Outliers</h3>
-              <p className="text-gray-400 text-xs">Find inconsistencies</p>
-            </motion.div>
+              <span className="flex items-center gap-3">
+                <span>Request A Demo</span>
+                <motion.span
+                  animate={{ x: [0, 5, 0] }}
+                  transition={{ 
+                    duration: 1.5,
+                    repeat: Infinity,
+                    ease: "easeInOut"
+                  }}
+                >
+                  →
+                </motion.span>
+              </span>
+            </motion.button>
           </motion.div>
-
-          {/* CTA Button */}
     
         </motion.div>
 
