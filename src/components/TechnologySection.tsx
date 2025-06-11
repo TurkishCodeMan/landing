@@ -132,13 +132,7 @@ export default function TechnologySection() {
                  2.3 €
                 </div>
                 
-                {/* Money particles - Static */}
-                <div className="absolute top-2 left-2 text-yellow-300 text-lg opacity-70">
-                  💰
-                </div>
-                <div className="absolute top-2 right-2 text-yellow-300 text-lg opacity-70">
-                  💎
-                </div>
+              
               </motion.div>
               <motion.div
                 initial={{ opacity: 0 }}
