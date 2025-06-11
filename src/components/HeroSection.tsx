@@ -90,7 +90,7 @@ export default function HeroSection() {
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.4, delay: 0.1 }}
-          className="relative flex justify-center items-center order-first lg:order-last"
+          className="relative flex justify-center items-center order-first lg:order-last mt-16 mx-6 lg:my-0 lg:mt-0"
         >
           <div className="relative w-full max-w-2xl">
             {/* Main Image */}
