@@ -42,8 +42,12 @@ export default function HeroSection() {
             transition={{ duration: 0.3, delay: 0.05 }}
             className="text-4xl md:text-4xl lg:text-5xl font-bold text-white leading-tight"
           >
+            {t('hero.titleHead') && (
+              <span className="bg-gradient-to-r from-sky-400 via-blue-500 to-indigo-600 bg-clip-text text-transparent">
+                {t('hero.titleHead')}
+              </span>
+            )}
             {t('hero.title')}{" "}
-     
             {" "}{t('hero.titleEnd')}
           </motion.h1>
           
