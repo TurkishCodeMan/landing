@@ -41,9 +41,17 @@ export default function Footer() {
                 viewport={{ once: true }}
               >
                 <h3 className="text-xl font-semibold text-white mb-4">{t('footer.contact')}</h3>
-                <div className="space-y-2 text-gray-300">
-                  <p>{t('footer.address1')}</p>
-                  <p>{t('footer.address2')}</p>
+                <div className="flex items-start gap-6">
+                  <div className="space-y-2 text-gray-300">
+                    <p>{t('footer.address1')}</p>
+                    <p>{t('footer.address2')}</p>
+                  </div>
+                  <div className="flex items-center">
+                    <div className="w-px h-8 bg-gray-400"></div>
+                  </div>
+                  <div className="bg-sky-500 rounded-lg px-4 py-2">
+                    <span className="text-white font-medium">info@artificax.com</span>
+                  </div>
                 </div>
               </motion.div>
             </motion.div>
@@ -125,7 +133,7 @@ export default function Footer() {
                 whileHover={{ scale: 1.02 }}
                 className="text-gray-400 text-sm"
               >
-                © 2025 Draw2Cost. All rights reserved.
+                © 2025 Draw2Cost. {t('footer.allRightsReserved')}
               </motion.p>
               
               {/* API Status Indicator */}

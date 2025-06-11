@@ -27,7 +27,8 @@ export default function TechnologySection() {
 
         {/* Animated Process Flow */}
         <div className="relative max-w-4xl mx-auto">
-          <div className="flex items-center justify-between">
+          {/* Desktop Layout */}
+          <div className="hidden md:flex items-center justify-between">
             {/* Input PNG */}
             <motion.div
               initial={{ opacity: 0, x: -100 }}
@@ -62,7 +63,7 @@ export default function TechnologySection() {
                 transition={{ delay: 0.5 }}
                 className="text-white text-lg font-semibold"
               >
-                PNG File
+                {t('technology.steps.dwgPngFile')}
               </motion.div>
               <div className="text-gray-400 text-sm">{t('technology.steps.input')}</div>
             </motion.div>
@@ -73,7 +74,6 @@ export default function TechnologySection() {
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5, delay: 0.8 }}
               viewport={{ once: true }}
-              className="hidden md:block"
             >
               <motion.div
                 animate={{ x: [0, 10, 0] }}
@@ -160,7 +160,7 @@ export default function TechnologySection() {
                 transition={{ delay: 0.8 }}
                 className="text-white text-lg font-semibold"
               >
-                AI Analysis
+                {t('technology.steps.aiAnalysis')}
               </motion.div>
               <div className="text-gray-400 text-sm">{t('technology.steps.processing')}</div>
             </motion.div>
@@ -171,7 +171,6 @@ export default function TechnologySection() {
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5, delay: 1.1 }}
               viewport={{ once: true }}
-              className="hidden md:block"
             >
               <motion.div
                 animate={{ x: [0, 10, 0] }}
@@ -271,8 +270,48 @@ export default function TechnologySection() {
             </motion.div>
           </div>
 
-          {/* Mobile arrows */}
-          <div className="md:hidden flex flex-col items-center mt-8 space-y-4">
+          {/* Mobile Layout */}
+          <div className="md:hidden flex flex-col items-center space-y-8">
+            {/* Input PNG - Mobile */}
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="flex flex-col items-center w-full max-w-xs"
+            >
+              <motion.div
+                animate={{ 
+                  scale: [1, 1.05, 1],
+                  rotateY: [0, 5, 0]
+                }}
+                transition={{ 
+                  duration: 3,
+                  repeat: Infinity,
+                  ease: "easeInOut"
+                }}
+                className="bg-gradient-to-br from-blue-500 to-purple-600 p-4 rounded-2xl shadow-2xl mb-4"
+              >
+                <Image 
+                  src="/tt.jpg" 
+                  alt="Technical Drawing Input" 
+                  width={120} 
+                  height={120} 
+                  className="rounded-lg"
+                />
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.5 }}
+                className="text-white text-base font-semibold text-center"
+              >
+                {t('technology.steps.dwgPngFile')}
+              </motion.div>
+              <div className="text-gray-400 text-sm text-center">{t('technology.steps.input')}</div>
+            </motion.div>
+
+            {/* Arrow Down 1 */}
             <motion.div
               animate={{ y: [0, 10, 0] }}
               transition={{ 
@@ -280,10 +319,76 @@ export default function TechnologySection() {
                 repeat: Infinity,
                 ease: "easeInOut"
               }}
-              className="text-4xl text-blue-400"
+              className="text-3xl text-blue-400"
             >
               ↓
             </motion.div>
+
+            {/* AI Processing - Mobile */}
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, delay: 0.5 }}
+              viewport={{ once: true }}
+              className="flex flex-col items-center w-full max-w-xs"
+            >
+              <motion.div
+                animate={{ 
+                  scale: [1, 1.1, 1]
+                }}
+                transition={{ 
+                  scale: { duration: 2, repeat: Infinity, ease: "easeInOut" }
+                }}
+                className="bg-gradient-to-br from-purple-600 to-pink-600 p-3 rounded-lg shadow-2xl mb-4 relative overflow-hidden"
+              >
+                <Image 
+                  src="/animated gif 3sn.gif" 
+                  alt="AI Processing Animation" 
+                  width={150} 
+                  height={150} 
+                  className="rounded-md"
+                  unoptimized
+                />
+                
+                {/* Processing particles - Smaller for mobile */}
+                <motion.div
+                  animate={{ 
+                    scale: [0, 1, 0],
+                    opacity: [0, 1, 0]
+                  }}
+                  transition={{ 
+                    duration: 1,
+                    repeat: Infinity,
+                    ease: "easeInOut"
+                  }}
+                  className="absolute -top-1 -right-1 w-3 h-3 bg-yellow-400 rounded-lg"
+                />
+                <motion.div
+                  animate={{ 
+                    scale: [0, 1, 0],
+                    opacity: [0, 1, 0]
+                  }}
+                  transition={{ 
+                    duration: 1.5,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                    delay: 0.5
+                  }}
+                  className="absolute -bottom-1 -left-1 w-2 h-2 bg-green-400 rounded-lg"
+                />
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.8 }}
+                className="text-white text-base font-semibold text-center"
+              >
+                {t('technology.steps.aiAnalysis')}
+              </motion.div>
+              <div className="text-gray-400 text-sm text-center">{t('technology.steps.processing')}</div>
+            </motion.div>
+
+            {/* Arrow Down 2 */}
             <motion.div
               animate={{ y: [0, 10, 0] }}
               transition={{ 
@@ -292,9 +397,92 @@ export default function TechnologySection() {
                 ease: "easeInOut",
                 delay: 1
               }}
-              className="text-4xl text-purple-400"
+              className="text-3xl text-purple-400"
             >
               ↓
+            </motion.div>
+
+            {/* Output Cost - Mobile */}
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, delay: 0.8 }}
+              viewport={{ once: true }}
+              className="flex flex-col items-center w-full max-w-xs"
+            >
+              <motion.div
+                animate={{ 
+                  y: [0, -10, 0],
+                  boxShadow: [
+                    "0 10px 30px rgba(34, 197, 94, 0.3)",
+                    "0 20px 40px rgba(34, 197, 94, 0.4)",
+                    "0 10px 30px rgba(34, 197, 94, 0.3)"
+                  ]
+                }}
+                transition={{ 
+                  duration: 2,
+                  repeat: Infinity,
+                  ease: "easeInOut"
+                }}
+                className="bg-gradient-to-br from-green-500 to-emerald-600 p-4 rounded-2xl shadow-2xl mb-4 relative overflow-hidden"
+              >
+                <motion.div
+                  animate={{ 
+                    scale: [1, 1.2, 1],
+                    rotate: [0, 10, 0]
+                  }}
+                  transition={{ 
+                    duration: 2,
+                    repeat: Infinity,
+                    ease: "easeInOut"
+                  }}
+                  className="text-3xl font-bold text-white"
+                >
+                 2.3 €
+                </motion.div>
+                
+                {/* Money particles - Smaller for mobile */}
+                <motion.div
+                  animate={{ 
+                    y: [-15, 15],
+                    opacity: [1, 0],
+                    scale: [0.5, 1]
+                  }}
+                  transition={{ 
+                    duration: 2,
+                    repeat: Infinity,
+                    ease: "easeOut"
+                  }}
+                  className="absolute top-1 left-1 text-yellow-300 text-base"
+                >
+                  💰
+                </motion.div>
+                <motion.div
+                  animate={{ 
+                    y: [-15, 15],
+                    opacity: [1, 0],
+                    scale: [0.5, 1]
+                  }}
+                  transition={{ 
+                    duration: 2,
+                    repeat: Infinity,
+                    ease: "easeOut",
+                    delay: 0.5
+                  }}
+                  className="absolute top-1 right-1 text-yellow-300 text-base"
+                >
+                  💎
+                </motion.div>
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 1.1 }}
+                className="text-white text-base font-semibold text-center"
+              >
+                {t('technology.steps.costEstimation')}
+              </motion.div>
+              <div className="text-gray-400 text-sm text-center">{t('technology.steps.output')}</div>
             </motion.div>
           </div>
         </div>

@@ -16,21 +16,33 @@ export const metadata: Metadata = {
   title: "Draw2Cost",
   description: "Draw2Cost Predictive Cost Estimation Tool",
   icons: {
-    icon: '/draw2cost_log.png',
-    shortcut: '/draw2cost_log.png',
-    apple: '/draw2cost_log.png',
+    icon: '/new_logo.png',
+    shortcut: '/new_logo.png',
+    apple: '/new_logo.png',
     other: [
       {
         rel: 'icon',
         type: 'image/png',
         sizes: '32x32',
-        url: '/draw2cost_log.png',
+        url: '/new_logo.png',
       },
       {
         rel: 'icon',
         type: 'image/png',
         sizes: '16x16',
-        url: '/draw2cost_log.png',
+        url: '/new_logo.png',
+      },
+      {
+        rel: 'icon',
+        type: 'image/png',
+        sizes: '192x192',
+        url: '/new_logo.png',
+      },
+      {
+        rel: 'icon',
+        type: 'image/png',
+        sizes: '512x512',
+        url: '/new_logo.png',
       },
     ],
   },

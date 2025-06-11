@@ -24,7 +24,7 @@ const translations = {
       badge: 'Built for Manufacturers',
       title: 'Why',
       titleHighlight: 'Manufacturers',
-      titleEnd: 'Choose Us',
+      titleEnd: ' Choose Us',
       subtitle: 'Transform your quoting process with AI that understands manufacturing',
     subtitleEnd: 'From drawings to estimates in seconds, not weeks.',
       list: [
@@ -60,10 +60,12 @@ const translations = {
       title: 'How It Works?',
       subtitle: 'Simply upload a DWG or PNG drawing. Our AI model analyzes the design, extracts key features and delivers an accurate cost estimate within seconds.',
       steps: {
-        input: 'DWG/PNG File',
+        input: 'Input',
         processing: 'Processing',
         output: 'Output',
-        costEstimation: 'Cost Estimation'
+        costEstimation: 'Cost Estimation',
+        dwgPngFile: 'DWG/PNG File',
+        aiAnalysis: 'AI Analysis'
       }
     },
     
@@ -73,7 +75,8 @@ const translations = {
       contact: 'Contact Us',
       address1: 'Boğaziçi Teknopark',
       address2: '2/5, 108 Sarıyer, İstanbul',
-      followUs: 'Follow Us'
+      followUs: 'Follow Us',
+      allRightsReserved: 'All rights reserved.'
     }
   },
   
@@ -83,11 +86,11 @@ const translations = {
     
     // Hero Section
     hero: {
-      title: 'Üreticiler için AI destekli maliyet tahmini',
+      title: 'Üreticiler için yapay zeka destekli üretim maliyeti tahmini',
       titleHighlight: 'üreticiler',
-      titleEnd: '— hızlı, tutarlı, ölçeklenebilir.',
-      subtitle: 'Mühendislik çizimlerinden AI kullanarak 60 saniyenin altında maliyet tahminleri oluşturun. Müşterilerinize daha hızlı, daha akıllı teklifler sunun.',
-      requestDemo: 'Demo Talep Et',
+      titleEnd: '- hızlı, tutarlı ve ölçeklenebilir',
+      subtitle: 'Teknik çizimlerinden yapay zeka ile 60 saniyede maliyet tahmini oluşturun ve müşterilerinize hızlı ve doğru teklif sunun.',
+      requestDemo: 'Demo Talep Edin',
       uploadSimilar: 'Anında maliyet tahminleri almak için benzer teknik çizimler yükleyin',
       detailedEngineering: 'AI hassasiyetiyle işlenen detaylı mühendislik çizimleri'
     },
@@ -97,33 +100,33 @@ const translations = {
       badge: 'Üreticiler İçin Tasarlandı',
       title: 'Neden',
       titleHighlight: 'Üreticiler',
-      titleEnd: 'Bizi Tercih Ediyor',
-      subtitle: 'Üretimi anlayan AI ile teklif verme sürecinizi dönüştürün.',
-      subtitleEnd: 'Çizimlerden tahminlere saniyeler içinde, haftalar değil.',
+      titleEnd: ' Bizi Tercih Ediyor',
+      subtitle: 'Üretim süreçlerini anlayan yapay zeka ile teklif verme sürecinizi iyileştirin.',
+      subtitleEnd: 'Teknik çizimden maliyet tahminine haftalar yerine saniyeler içinde ulaşın.',
       list: [
         {
           title: '60 Saniyede Maliyet Tahmini',
-          description: 'Mühendislik çizimlerini 60 saniyenin altında doğru maliyet tahminlerine dönüştürün. Artık teklif için haftalarca beklemeye gerek yok.'
+          description: 'Teknik çizimlerden 60 saniyeden kısa sürede doğru maliyet tahminleri çıkarın. Artık haftalarca teklif beklemeye son.'
         },
         {
           title: 'Tutarlı Fiyatlandırma',
-          description: 'Tutarlı bir fiyatlandırma politikasını desteklemek için AI ile maliyet tahminlerini standartlaştırın.'
+          description: 'Tutarlı bir fiyatlandırma politikası için maliyet tahminlerini yapay zeka ile standart hale getirin.'
         },
         {
-          title: 'Anormallik Tespiti',
-          description: 'İnsanlar tarafından yapılan geçmiş maliyet tahminlerindeki anormallikleri tespit edin.'
+          title: 'Aykırılık Tespiti',
+          description: 'İnsanlar tarafından yapılan geçmiş maliyet tahminlerindeki aykırılıkları tespit edin.'
         },
         {
-          title: 'Daha Fazla İş Kazanın',
-          description: 'Rekabetçi, veri odaklı tekliflerle Teklif Taleplerini daha hızlı yanıtlayın. Rakipler hala hesaplama yaparken anlaşmaları kapatın.'
+          title: 'Daha Fazla Müşteri Kazanın',
+          description: 'Rekabetçi ve veri odaklı yaklaşımla müşterilerin teklif taleplerine anında cevap verin, rakipleriniz hesap yaparken siz işi alın.'
         },
         {
           title: 'Üretim Odaklı',
-          description: 'Üreticiler için özel olarak geliştirilmiştir. Tezgahlama, montaj, malzemeler ve üretim süreçlerini anlar.'
+          description: 'Üreticiler için özel olarak geliştirilmiştir. Makine ile işleme, montaj, malzeme ve üretim süreçlerini kavrar.'
         },
         {
-          title: 'Yerinde veya Bulut — Siz Seçin',
-          description: 'Hem yerinde hem de bulutta konuşlandırılabilir. Maksimum veri güvenliği için tam yerel kurulum seçin.'
+          title: 'Altyapı Tercihi Size Ait: Lokalde mi çalışsın, bulutta mı?',
+          description: 'Draw2Cost hem lokalde hem de bulutta konuşlandırılabilir. Daha fazla veri güvenliği için tamamen lokal kurulumu tercih edebilirsiniz.'
         }
       ]
     },
@@ -131,22 +134,25 @@ const translations = {
     // Technology Section
     technology: {
       title: 'Nasıl Çalışır?',
-      subtitle: 'Basitçe bir DWG veya PNG çizim yükleyin. AI modelimiz tasarımı analiz eder, ana özellikleri çıkarır ve saniyeler içinde doğru bir maliyet tahmini sunar.',
+      subtitle: 'Yapay zeka modeli parça tasarımlarını detaylıca inceler, kritik özellikleri belirler ve saniyeler içinde hatasız maliyet tahminleri oluşturur.',
       steps: {
         input: 'Girdi',
         processing: 'İşleniyor',
         output: 'Çıktı',
-        costEstimation: 'Maliyet Tahmini'
+        costEstimation: 'Maliyet Tahmini',
+        dwgPngFile: 'DWG/PNG Dosyası',
+        aiAnalysis: 'Yapay Zeka Modeli'
       }
     },
     
     // Footer
     footer: {
       title: '60 Saniyede Maliyet Tahmini',
-      contact: 'İletişim',
+      contact: 'Bize Ulaşın',
       address1: 'Boğaziçi Teknopark',
       address2: '2/5, 108 Sarıyer, İstanbul',
-      followUs: 'Bizi Takip Edin'
+      followUs: 'Bizi Takip Edin',
+      allRightsReserved: 'Tüm hakları saklıdır.'
     }
   }
 };
@@ -163,7 +169,13 @@ interface LanguageStore {
 // Create store
 const useLanguageStore = create<LanguageStore>((set, get) => ({
   language: 'en',
-  setLanguage: (language: Language) => set({ language }),
+  setLanguage: (language: Language) => {
+    // Save to localStorage
+    if (typeof window !== 'undefined') {
+      localStorage.setItem('draw2cost_language', language);
+    }
+    set({ language });
+  },
   t: (key: string) => {
     const { language } = get();
     const keys = key.split('.');
@@ -191,6 +203,14 @@ const useLanguageStore = create<LanguageStore>((set, get) => ({
     return result || key;
   }
 }));
+
+// Initialize language from localStorage
+if (typeof window !== 'undefined') {
+  const savedLanguage = localStorage.getItem('draw2cost_language') as Language;
+  if (savedLanguage && (savedLanguage === 'en' || savedLanguage === 'tr')) {
+    useLanguageStore.setState({ language: savedLanguage });
+  }
+}
 
 export const useTranslate = () => {
   const { language, setLanguage, t } = useLanguageStore();
