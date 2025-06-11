@@ -88,7 +88,7 @@ const translations = {
     hero: {
       title: 'Üreticiler için yapay zeka destekli üretim maliyeti tahmini',
       titleHighlight: 'üreticiler',
-      titleEnd: '- hızlı, tutarlı ve ölçeklenebilir',
+      titleEnd: '- hızlı, tutarlı ve ölçeklenebilir.',
       subtitle: 'Teknik çizimlerinden yapay zeka ile 60 saniyede maliyet tahmini oluşturun ve müşterilerinize hızlı ve doğru teklif sunun.',
       requestDemo: 'Demo Talep Edin',
       uploadSimilar: 'Anında maliyet tahminleri almak için benzer teknik çizimler yükleyin',

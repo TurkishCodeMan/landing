@@ -43,19 +43,7 @@ export default function HeroSection() {
             className="text-4xl md:text-4xl lg:text-5xl font-bold text-white leading-tight"
           >
             {t('hero.title')}{" "}
-            <motion.span 
-              className="relative inline-block"
-              whileHover={{ scale: 1.02 }}
-            >
-              <span className="bg-gradient-to-r from-sky-400 via-blue-500 to-indigo-600 bg-clip-text text-transparent">
-                {t('hero.titleHighlight')}
-              </span>
-              <motion.div
-                className="absolute -inset-2 bg-gradient-to-r from-sky-400/20 via-blue-500/20 to-indigo-600/20 rounded-lg blur-xl opacity-0"
-                whileHover={{ opacity: 1 }}
-                transition={{ duration: 0.2 }}
-              />
-            </motion.span>
+     
             {" "}{t('hero.titleEnd')}
           </motion.h1>
           
