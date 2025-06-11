@@ -38,15 +38,6 @@ export default function TechnologySection() {
               className="flex flex-col items-center"
             >
               <motion.div
-                animate={{ 
-                  scale: [1, 1.05, 1],
-                  rotateY: [0, 5, 0]
-                }}
-                transition={{ 
-                  duration: 3,
-                  repeat: Infinity,
-                  ease: "easeInOut"
-                }}
                 className="bg-gradient-to-br from-blue-500 to-purple-600 p-6 rounded-2xl shadow-2xl mb-4"
               >
                 <Image 
@@ -68,24 +59,15 @@ export default function TechnologySection() {
               <div className="text-gray-400 text-sm">{t('technology.steps.input')}</div>
             </motion.div>
 
-            {/* Arrow 1 */}
+            {/* Arrow 1 - Static */}
             <motion.div
               initial={{ opacity: 0, scale: 0 }}
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5, delay: 0.8 }}
               viewport={{ once: true }}
+              className="text-4xl text-blue-400"
             >
-              <motion.div
-                animate={{ x: [0, 10, 0] }}
-                transition={{ 
-                  duration: 2,
-                  repeat: Infinity,
-                  ease: "easeInOut"
-                }}
-                className="text-4xl text-blue-400"
-              >
-                →
-              </motion.div>
+              →
             </motion.div>
 
             {/* AI Processing */}
@@ -97,12 +79,6 @@ export default function TechnologySection() {
               className="flex flex-col items-center"
             >
               <motion.div
-                animate={{ 
-                  scale: [1, 1.1, 1]
-                }}
-                transition={{ 
-                  scale: { duration: 2, repeat: Infinity, ease: "easeInOut" }
-                }}
                 className="bg-gradient-to-br from-purple-600 to-pink-600 p-4 rounded-lg shadow-2xl mb-4 relative overflow-hidden"
               >
                 <Image 
@@ -114,45 +90,10 @@ export default function TechnologySection() {
                   unoptimized
                 />
                 
-                {/* Processing particles */}
-                <motion.div
-                  animate={{ 
-                    scale: [0, 1, 0],
-                    opacity: [0, 1, 0]
-                  }}
-                  transition={{ 
-                    duration: 1,
-                    repeat: Infinity,
-                    ease: "easeInOut"
-                  }}
-                  className="absolute -top-2 -right-2 w-4 h-4 bg-yellow-400 rounded-lg"
-                />
-                <motion.div
-                  animate={{ 
-                    scale: [0, 1, 0],
-                    opacity: [0, 1, 0]
-                  }}
-                  transition={{ 
-                    duration: 1.5,
-                    repeat: Infinity,
-                    ease: "easeInOut",
-                    delay: 0.5
-                  }}
-                  className="absolute -bottom-2 -left-2 w-3 h-3 bg-green-400 rounded-lg"
-                />
-                <motion.div
-                  animate={{ 
-                    scale: [0, 1, 0],
-                    opacity: [0, 1, 0]
-                  }}
-                  transition={{ 
-                    duration: 1.5,
-                    repeat: Infinity,
-                    ease: "easeInOut",
-                    delay: 1
-                  }}
-                  className="absolute top-0 -left-3 w-2 h-2 bg-blue-400 rounded-lg"
-                />
+                {/* Processing particles - Static */}
+                <div className="absolute -top-2 -right-2 w-4 h-4 bg-yellow-400 rounded-lg opacity-60" />
+                <div className="absolute -bottom-2 -left-2 w-3 h-3 bg-green-400 rounded-lg opacity-60" />
+                <div className="absolute top-0 -left-3 w-2 h-2 bg-blue-400 rounded-lg opacity-60" />
               </motion.div>
               <motion.div
                 initial={{ opacity: 0 }}
@@ -165,25 +106,15 @@ export default function TechnologySection() {
               <div className="text-gray-400 text-sm">{t('technology.steps.processing')}</div>
             </motion.div>
 
-            {/* Arrow 2 */}
+            {/* Arrow 2 - Static */}
             <motion.div
               initial={{ opacity: 0, scale: 0 }}
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5, delay: 1.1 }}
               viewport={{ once: true }}
+              className="text-4xl text-purple-400"
             >
-              <motion.div
-                animate={{ x: [0, 10, 0] }}
-                transition={{ 
-                  duration: 2,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                  delay: 1
-                }}
-                className="text-4xl text-purple-400"
-              >
-                →
-              </motion.div>
+              →
             </motion.div>
 
             {/* Output Cost */}
@@ -195,68 +126,19 @@ export default function TechnologySection() {
               className="flex flex-col items-center"
             >
               <motion.div
-                animate={{ 
-                  y: [0, -10, 0],
-                  boxShadow: [
-                    "0 10px 30px rgba(34, 197, 94, 0.3)",
-                    "0 20px 40px rgba(34, 197, 94, 0.4)",
-                    "0 10px 30px rgba(34, 197, 94, 0.3)"
-                  ]
-                }}
-                transition={{ 
-                  duration: 2,
-                  repeat: Infinity,
-                  ease: "easeInOut"
-                }}
                 className="bg-gradient-to-br from-green-500 to-emerald-600 p-6 rounded-2xl shadow-2xl mb-4 relative overflow-hidden"
               >
-                <motion.div
-                  animate={{ 
-                    scale: [1, 1.2, 1],
-                    rotate: [0, 10, 0]
-                  }}
-                  transition={{ 
-                    duration: 2,
-                    repeat: Infinity,
-                    ease: "easeInOut"
-                  }}
-                  className="text-4xl font-bold text-white"
-                >
+                <div className="text-4xl font-bold text-white">
                  2.3 €
-                </motion.div>
+                </div>
                 
-                {/* Money particles */}
-                <motion.div
-                  animate={{ 
-                    y: [-20, 20],
-                    opacity: [1, 0],
-                    scale: [0.5, 1]
-                  }}
-                  transition={{ 
-                    duration: 2,
-                    repeat: Infinity,
-                    ease: "easeOut"
-                  }}
-                  className="absolute top-2 left-2 text-yellow-300 text-lg"
-                >
+                {/* Money particles - Static */}
+                <div className="absolute top-2 left-2 text-yellow-300 text-lg opacity-70">
                   💰
-                </motion.div>
-                <motion.div
-                  animate={{ 
-                    y: [-20, 20],
-                    opacity: [1, 0],
-                    scale: [0.5, 1]
-                  }}
-                  transition={{ 
-                    duration: 2,
-                    repeat: Infinity,
-                    ease: "easeOut",
-                    delay: 0.5
-                  }}
-                  className="absolute top-2 right-2 text-yellow-300 text-lg"
-                >
+                </div>
+                <div className="absolute top-2 right-2 text-yellow-300 text-lg opacity-70">
                   💎
-                </motion.div>
+                </div>
               </motion.div>
               <motion.div
                 initial={{ opacity: 0 }}
@@ -281,15 +163,6 @@ export default function TechnologySection() {
               className="flex flex-col items-center w-full max-w-xs"
             >
               <motion.div
-                animate={{ 
-                  scale: [1, 1.05, 1],
-                  rotateY: [0, 5, 0]
-                }}
-                transition={{ 
-                  duration: 3,
-                  repeat: Infinity,
-                  ease: "easeInOut"
-                }}
                 className="bg-gradient-to-br from-blue-500 to-purple-600 p-4 rounded-2xl shadow-2xl mb-4"
               >
                 <Image 
@@ -311,18 +184,10 @@ export default function TechnologySection() {
               <div className="text-gray-400 text-sm text-center">{t('technology.steps.input')}</div>
             </motion.div>
 
-            {/* Arrow Down 1 */}
-            <motion.div
-              animate={{ y: [0, 10, 0] }}
-              transition={{ 
-                duration: 2,
-                repeat: Infinity,
-                ease: "easeInOut"
-              }}
-              className="text-3xl text-blue-400"
-            >
+            {/* Arrow Down 1 - Static */}
+            <div className="text-3xl text-blue-400">
               ↓
-            </motion.div>
+            </div>
 
             {/* AI Processing - Mobile */}
             <motion.div
@@ -333,12 +198,6 @@ export default function TechnologySection() {
               className="flex flex-col items-center w-full max-w-xs"
             >
               <motion.div
-                animate={{ 
-                  scale: [1, 1.1, 1]
-                }}
-                transition={{ 
-                  scale: { duration: 2, repeat: Infinity, ease: "easeInOut" }
-                }}
                 className="bg-gradient-to-br from-purple-600 to-pink-600 p-3 rounded-lg shadow-2xl mb-4 relative overflow-hidden"
               >
                 <Image 
@@ -350,32 +209,9 @@ export default function TechnologySection() {
                   unoptimized
                 />
                 
-                {/* Processing particles - Smaller for mobile */}
-                <motion.div
-                  animate={{ 
-                    scale: [0, 1, 0],
-                    opacity: [0, 1, 0]
-                  }}
-                  transition={{ 
-                    duration: 1,
-                    repeat: Infinity,
-                    ease: "easeInOut"
-                  }}
-                  className="absolute -top-1 -right-1 w-3 h-3 bg-yellow-400 rounded-lg"
-                />
-                <motion.div
-                  animate={{ 
-                    scale: [0, 1, 0],
-                    opacity: [0, 1, 0]
-                  }}
-                  transition={{ 
-                    duration: 1.5,
-                    repeat: Infinity,
-                    ease: "easeInOut",
-                    delay: 0.5
-                  }}
-                  className="absolute -bottom-1 -left-1 w-2 h-2 bg-green-400 rounded-lg"
-                />
+                {/* Processing particles - Static for mobile */}
+                <div className="absolute -top-1 -right-1 w-3 h-3 bg-yellow-400 rounded-lg opacity-60" />
+                <div className="absolute -bottom-1 -left-1 w-2 h-2 bg-green-400 rounded-lg opacity-60" />
               </motion.div>
               <motion.div
                 initial={{ opacity: 0 }}
@@ -388,19 +224,10 @@ export default function TechnologySection() {
               <div className="text-gray-400 text-sm text-center">{t('technology.steps.processing')}</div>
             </motion.div>
 
-            {/* Arrow Down 2 */}
-            <motion.div
-              animate={{ y: [0, 10, 0] }}
-              transition={{ 
-                duration: 2,
-                repeat: Infinity,
-                ease: "easeInOut",
-                delay: 1
-              }}
-              className="text-3xl text-purple-400"
-            >
+            {/* Arrow Down 2 - Static */}
+            <div className="text-3xl text-purple-400">
               ↓
-            </motion.div>
+            </div>
 
             {/* Output Cost - Mobile */}
             <motion.div
@@ -411,68 +238,19 @@ export default function TechnologySection() {
               className="flex flex-col items-center w-full max-w-xs"
             >
               <motion.div
-                animate={{ 
-                  y: [0, -10, 0],
-                  boxShadow: [
-                    "0 10px 30px rgba(34, 197, 94, 0.3)",
-                    "0 20px 40px rgba(34, 197, 94, 0.4)",
-                    "0 10px 30px rgba(34, 197, 94, 0.3)"
-                  ]
-                }}
-                transition={{ 
-                  duration: 2,
-                  repeat: Infinity,
-                  ease: "easeInOut"
-                }}
                 className="bg-gradient-to-br from-green-500 to-emerald-600 p-4 rounded-2xl shadow-2xl mb-4 relative overflow-hidden"
               >
-                <motion.div
-                  animate={{ 
-                    scale: [1, 1.2, 1],
-                    rotate: [0, 10, 0]
-                  }}
-                  transition={{ 
-                    duration: 2,
-                    repeat: Infinity,
-                    ease: "easeInOut"
-                  }}
-                  className="text-3xl font-bold text-white"
-                >
+                <div className="text-3xl font-bold text-white">
                  2.3 €
-                </motion.div>
+                </div>
                 
-                {/* Money particles - Smaller for mobile */}
-                <motion.div
-                  animate={{ 
-                    y: [-15, 15],
-                    opacity: [1, 0],
-                    scale: [0.5, 1]
-                  }}
-                  transition={{ 
-                    duration: 2,
-                    repeat: Infinity,
-                    ease: "easeOut"
-                  }}
-                  className="absolute top-1 left-1 text-yellow-300 text-base"
-                >
+                {/* Money particles - Static mobile */}
+                <div className="absolute top-1 left-1 text-yellow-300 text-base opacity-70">
                   💰
-                </motion.div>
-                <motion.div
-                  animate={{ 
-                    y: [-15, 15],
-                    opacity: [1, 0],
-                    scale: [0.5, 1]
-                  }}
-                  transition={{ 
-                    duration: 2,
-                    repeat: Infinity,
-                    ease: "easeOut",
-                    delay: 0.5
-                  }}
-                  className="absolute top-1 right-1 text-yellow-300 text-base"
-                >
+                </div>
+                <div className="absolute top-1 right-1 text-yellow-300 text-base opacity-70">
                   💎
-                </motion.div>
+                </div>
               </motion.div>
               <motion.div
                 initial={{ opacity: 0 }}

@@ -78,29 +78,21 @@ export default function HeroSection() {
             transition={{ duration: 0.3, delay: 0.15 }}
             className="flex justify-center lg:justify-start"
           >
-            <motion.button
+            <motion.a
+              href="mailto:info@artificax.com?subject=Draw2Cost Demo Request&body=Hello,%0D%0A%0D%0AI would like to request a demo of Draw2Cost.%0D%0A%0D%0AThank you."
               whileHover={{ 
                 scale: 1.05,
                 boxShadow: "0 20px 40px rgba(59, 130, 246, 0.4)",
                 backgroundColor: "#2563eb"
               }}
               whileTap={{ scale: 0.95 }}
-              className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-semibold px-8 py-4 rounded-xl shadow-lg transition-all duration-300 border border-blue-500/30"
+              className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-semibold px-8 py-4 rounded-xl shadow-lg transition-all duration-300 border border-blue-500/30 inline-block"
             >
               <span className="flex items-center gap-3">
                 <span>{t('hero.requestDemo')}</span>
-                <motion.span
-                  animate={{ x: [0, 5, 0] }}
-                  transition={{ 
-                    duration: 1.5,
-                    repeat: Infinity,
-                    ease: "easeInOut"
-                  }}
-                >
-                  →
-                </motion.span>
+                <span>→</span>
               </span>
-            </motion.button>
+            </motion.a>
           </motion.div>
     
         </motion.div>
@@ -115,10 +107,7 @@ export default function HeroSection() {
           <div className="relative w-full max-w-2xl">
             {/* Main Image */}
             <motion.div
-              whileHover={{ 
-                scale: 1.01,
-                transition: { duration: 0.2, ease: "easeOut" }
-              }}
+         
               className="relative"
             >
               <div className="absolute inset-0 bg-gradient-to-br from-sky-400/15 to-blue-600/15 rounded-2xl blur-md"></div>

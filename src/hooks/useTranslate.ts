@@ -25,8 +25,8 @@ const translations = {
       title: 'Why',
       titleHighlight: 'Manufacturers',
       titleEnd: ' Choose Us',
-      subtitle: 'Transform your quoting process with AI that understands manufacturing',
-    subtitleEnd: 'From drawings to estimates in seconds, not weeks.',
+      subtitle: 'Transform your quoting process with AI that understands manufacturing.',
+    subtitleEnd: 'From drawings to cost estimates in seconds, not weeks.',
       list: [
         {
           title: '60-Second Cost Estimation',

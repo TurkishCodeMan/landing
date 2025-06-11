@@ -8,7 +8,7 @@ export default function Footer() {
   const { t } = useTranslate();
   
   return (
-    <footer className="relative bg-slate-900 text-white overflow-hidden">
+    <footer className="relative bg-black/10 backdrop-blur-md border-b border-white/10 text-white overflow-hidden">
       <div className="relative py-16 px-4">
         <div className="max-w-7xl mx-auto">
           {/* Main Footer Content */}
@@ -47,9 +47,13 @@ export default function Footer() {
                     <p>{t('footer.address2')}</p>
                   </div>
                   <div className="flex items-center">
-                    <div className="w-px h-8 bg-gray-400"></div>
+                    <div className="w-px h-12 bg-gray-400"></div>
                   </div>
-                  <div className="bg-sky-500 rounded-lg px-4 py-2">
+                  <div className="bg-sky-500 rounded-lg px-4 py-2 flex items-center gap-2">
+                    <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M1.5 8.67v8.58a3 3 0 003 3h15a3 3 0 003-3V8.67l-8.928 5.493a3 3 0 01-3.144 0L1.5 8.67z"/>
+                      <path d="M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.158l9.714 5.978a1.5 1.5 0 001.572 0L22.5 6.908z"/>
+                    </svg>
                     <span className="text-white font-medium">info@artificax.com</span>
                   </div>
                 </div>
@@ -136,22 +140,11 @@ export default function Footer() {
                 © 2025 Draw2Cost. {t('footer.allRightsReserved')}
               </motion.p>
               
-              {/* API Status Indicator */}
-              <motion.div
-                animate={{ 
-                  scale: [1, 1.05, 1],
-                  opacity: [0.7, 1, 0.7]
-                }}
-                transition={{ 
-                  duration: 2,
-                  repeat: Infinity,
-                  ease: "easeInOut"
-                }}
-                className="flex items-center space-x-2 mt-4 md:mt-0"
-              >
+              {/* API Status Indicator - Static */}
+              <div className="flex items-center space-x-2 mt-4 md:mt-0">
                 <div className="w-2 h-2 bg-green-400 rounded-full"></div>
                 <span className="text-sm text-gray-400">API Status: Active</span>
-              </motion.div>
+              </div>
             </div>
           </motion.div>
         </div>

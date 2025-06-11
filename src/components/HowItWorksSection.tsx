@@ -124,39 +124,39 @@ function StepCard({ step, index }: { step: Step; index: number }) {
 export default function HowItWorksSection() {
   return (
     <section className="relative py-20 px-4 bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 overflow-hidden">
-      {/* Background geometric shapes */}
+      {/* Background geometric shapes - Optimized */}
       <div className="absolute inset-0">
         <motion.div
           animate={{ 
-            rotate: [0, 360],
-            scale: [1, 1.2, 1]
+            scale: [1, 1.05, 1],
+            opacity: [0.1, 0.15, 0.1]
           }}
           transition={{ 
-            duration: 30,
+            duration: 20,
             repeat: Infinity,
-            ease: "linear"
+            ease: "easeInOut"
           }}
           className="absolute top-20 left-20 w-64 h-64 bg-gradient-to-br from-sky-400/10 to-blue-500/10 rounded-full blur-3xl"
         />
         <motion.div
           animate={{ 
-            rotate: [360, 0],
-            scale: [1, 1.3, 1]
+            scale: [1, 1.08, 1],
+            opacity: [0.1, 0.15, 0.1]
           }}
           transition={{ 
             duration: 25,
             repeat: Infinity,
-            ease: "linear"
+            ease: "easeInOut"
           }}
           className="absolute bottom-20 right-20 w-96 h-96 bg-gradient-to-br from-indigo-600/10 to-blue-800/10 rounded-full blur-3xl"
         />
         <motion.div
           animate={{ 
-            y: [0, -30, 0],
-            x: [0, 30, 0]
+            y: [0, -10, 0],
+            opacity: [0.05, 0.1, 0.05]
           }}
           transition={{ 
-            duration: 20,
+            duration: 15,
             repeat: Infinity,
             ease: "easeInOut"
           }}

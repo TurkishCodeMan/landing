@@ -47,7 +47,7 @@ function FeatureCard({ feature, index }: { feature: Feature; index: number }) {
         </motion.h3>
 
         {/* Description */}
-        <p className="text-gray-300 leading-relaxed text-sm flex-grow">
+        <p className="text-gray-300 leading-relaxed text-md flex-grow">
           {feature.description}
         </p>
 
@@ -83,32 +83,10 @@ export default function FeaturesSection() {
 
   return (
     <section className="py-20 px-4 bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 relative overflow-hidden">
-      {/* Background Effects */}
+      {/* Background Effects - Static */}
       <div className="absolute inset-0">
-        <motion.div
-          animate={{ 
-            rotate: [0, 360],
-            scale: [1, 1.2, 1]
-          }}
-          transition={{ 
-            duration: 30,
-            repeat: Infinity,
-            ease: "linear"
-          }}
-          className="absolute top-20 left-20 w-64 h-64 bg-gradient-to-br from-sky-400/10 to-blue-500/10 rounded-full blur-3xl"
-        />
-        <motion.div
-          animate={{ 
-            rotate: [360, 0],
-            scale: [1, 1.3, 1]
-          }}
-          transition={{ 
-            duration: 40,
-            repeat: Infinity,
-            ease: "linear"
-          }}
-          className="absolute bottom-20 right-20 w-80 h-80 bg-gradient-to-br from-indigo-600/10 to-blue-800/10 rounded-full blur-3xl"
-        />
+        <div className="absolute top-20 left-20 w-64 h-64 bg-gradient-to-br from-sky-400/8 to-blue-500/8 rounded-full blur-3xl opacity-10" />
+        <div className="absolute bottom-20 right-20 w-80 h-80 bg-gradient-to-br from-indigo-600/8 to-blue-800/8 rounded-full blur-3xl opacity-10" />
       </div>
 
       <div className="max-w-7xl mx-auto relative z-10">

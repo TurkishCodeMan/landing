@@ -16,8 +16,8 @@ export default function Navigation() {
             className="flex items-center space-x-1"
           >
             <motion.div
-              whileHover={{ scale: 1.1, rotate: 5 }}
-              transition={{ type: "spring", stiffness: 300 }}
+              whileHover={{ scale: 1.02 }}
+              transition={{ duration: 0.2, ease: "easeOut" }}
               className="p-1 rounded-lg shadow-lg flex items-center justify-center"
             >
               <Image
@@ -29,17 +29,16 @@ export default function Navigation() {
               />
             </motion.div>
             <motion.h1 
-              whileHover={{ scale: 1.05, y: -2 }}
-              transition={{ type: "spring", stiffness: 400, damping: 25 }}
+              whileHover={{ scale: 1.01 }}
+              transition={{ duration: 0.2, ease: "easeOut" }}
               className="text-2xl font-bold text-white tracking-wide relative group ml-2"
             >
               <span className="relative z-10">DRAW2COST</span>
               <motion.div
-                className="absolute inset-0 bg-white/5 rounded-lg -z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                whileHover={{ scale: 1.1 }}
+                className="absolute inset-0 bg-white/5 rounded-lg -z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-200"
               />
               <motion.div
-                className="absolute bottom-0 left-0 h-0.5 bg-blue-400 transition-all duration-300 group-hover:w-full w-0"
+                className="absolute bottom-0 left-0 h-0.5 bg-blue-400 transition-all duration-200 group-hover:w-full w-0"
               />
             </motion.h1>
           </motion.div>

@@ -5,17 +5,16 @@ import { motion } from "framer-motion";
 export default function CTASection() {
   return (
     <section className="relative py-32 px-4 bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 overflow-hidden">
-      {/* Animated Background Elements */}
+      {/* Animated Background Elements - Optimized */}
       <div className="absolute inset-0">
         {/* Large floating orbs */}
         <motion.div
           animate={{ 
-            scale: [1, 1.3, 1],
-            rotate: [0, 180, 360],
-            opacity: [0.1, 0.2, 0.1]
+            scale: [1, 1.05, 1],
+            opacity: [0.1, 0.15, 0.1]
           }}
           transition={{ 
-            duration: 20,
+            duration: 15,
             repeat: Infinity,
             ease: "easeInOut"
           }}
@@ -23,26 +22,25 @@ export default function CTASection() {
         />
         <motion.div
           animate={{ 
-            scale: [1, 1.4, 1],
-            rotate: [360, 180, 0],
-            opacity: [0.15, 0.25, 0.15]
+            scale: [1, 1.08, 1],
+            opacity: [0.15, 0.2, 0.15]
           }}
           transition={{ 
-            duration: 25,
+            duration: 20,
             repeat: Infinity,
             ease: "easeInOut"
           }}
           className="absolute -bottom-32 -right-32 w-80 h-80 bg-gradient-to-br from-blue-600/40 to-indigo-700/40 rounded-full blur-3xl"
         />
         
-        {/* Geometric shapes */}
+        {/* Geometric shapes - Optimized */}
         <motion.div
           animate={{ 
-            y: [0, -30, 0],
-            rotate: [0, 45, 0]
+            y: [0, -10, 0],
+            opacity: [0.05, 0.1, 0.05]
           }}
           transition={{ 
-            duration: 12,
+            duration: 10,
             repeat: Infinity,
             ease: "easeInOut"
           }}
@@ -50,11 +48,11 @@ export default function CTASection() {
         />
         <motion.div
           animate={{ 
-            x: [0, 20, 0],
-            rotate: [0, -45, 0]
+            scale: [1, 1.02, 1],
+            opacity: [0.1, 0.15, 0.1]
           }}
           transition={{ 
-            duration: 15,
+            duration: 12,
             repeat: Infinity,
             ease: "easeInOut"
           }}
