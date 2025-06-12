@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import GoogleAnalytics from "@/components/GoogleAnalytics";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -13,8 +14,72 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Draw2Cost",
-  description: "Draw2Cost Predictive Cost Estimation Tool",
+  title: {
+    default: 'Draw2Cost - AI-Powered Construction Cost Estimation',
+    template: '%s | Draw2Cost'
+  },
+  description: 'Revolutionize construction cost estimation with AI. Draw your project and get instant, accurate cost predictions. Try Draw2Cost for free today.',
+  keywords: [
+    'construction cost estimation',
+    'AI cost prediction',
+    'building cost calculator',
+    'construction planning',
+    'cost estimation software',
+    'yapı maliyet hesaplama',
+    'inşaat maliyet tahmini',
+    'AI maliyet hesaplama',
+    'yapay zeka maliyet tahmini'
+  ],
+  authors: [{ name: 'Artificax' }],
+  creator: 'Artificax',
+  publisher: 'Artificax',
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  metadataBase: new URL('https://draw2cost.com'),
+  alternates: {
+    canonical: '/',
+    languages: {
+      'en-US': '/en',
+      'tr-TR': '/tr',
+    },
+  },
+  openGraph: {
+    title: 'Draw2Cost - AI-Powered Construction Cost Estimation',
+    description: 'Revolutionize construction cost estimation with AI. Draw your project and get instant, accurate cost predictions.',
+    url: 'https://draw2cost.com',
+    siteName: 'Draw2Cost',
+    images: [
+      {
+        url: '/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'Draw2Cost - AI Construction Cost Estimation',
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Draw2Cost - AI-Powered Construction Cost Estimation',
+    description: 'Revolutionize construction cost estimation with AI. Draw your project and get instant, accurate cost predictions.',
+    images: ['/og-image.png'],
+    creator: '@artificax',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
   icons: {
     icon: '/icons/favicon.ico',
     shortcut: '/icons/favicon.ico',
@@ -46,6 +111,10 @@ export const metadata: Metadata = {
       },
     ],
   },
+  verification: {
+    google: 'your-google-verification-code',
+    yandex: 'your-yandex-verification-code',
+  },
 };
 
 export default function RootLayout({
@@ -58,6 +127,9 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        {process.env.NEXT_PUBLIC_GA_ID && (
+          <GoogleAnalytics ga_id={process.env.NEXT_PUBLIC_GA_ID} />
+        )}
         {children}
       </body>
     </html>
