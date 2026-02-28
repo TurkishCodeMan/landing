@@ -127,9 +127,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {process.env.NEXT_PUBLIC_GA_ID && (
-          <GoogleAnalytics ga_id={process.env.NEXT_PUBLIC_GA_ID} />
-        )}
+        <GoogleAnalytics ga_id="G-5FDH7DNBMS" />
         {children}
       </body>
     </html>
