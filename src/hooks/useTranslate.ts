@@ -10,10 +10,10 @@ const translations = {
     
     // Hero Section
     hero: {
-      titleHead:'Manufacturers ',
-      title: 'AI-powered cost estimation for',
+      titleHead:'',
+      title: 'AI-powered cost estimation for ',
       titleHighlight: 'manufacturers',
-      titleEnd: '— fast, consistent, scalable.',
+      titleEnd: ' — fast, consistent, scalable.',
       subtitle: 'Generate cost estimates from engineering drawings using AI  in under 60 seconds. Deliver faster, smarter quotes to your customers.',
       requestDemo: 'Request a Demo',
       uploadSimilar: 'Upload similar technical drawings to get instant cost estimations',
@@ -89,8 +89,8 @@ const translations = {
     hero: {
       titleHead:'Üreticiler ',
       title: 'için yapay zeka destekli üretim maliyeti tahmini',
-      titleHighlight: 'üreticiler',
-      titleEnd: '- hızlı, tutarlı ve ölçeklenebilir.',
+      titleHighlight: '',
+      titleEnd: ' — hızlı, tutarlı ve ölçeklenebilir.',
       subtitle: 'Teknik çizimlerinden yapay zeka ile 60 saniyede maliyet tahmini oluşturun ve müşterilerinize hızlı ve doğru teklif sunun.',
       requestDemo: 'Demo Talep Edin',
       uploadSimilar: 'Anında maliyet tahminleri almak için benzer teknik çizimler yükleyin',
@@ -202,7 +202,7 @@ const useLanguageStore = create<LanguageStore>((set, get) => ({
       }
     }
     
-    return result || key;
+    return result !== undefined && result !== null ? result : key;
   }
 }));
 

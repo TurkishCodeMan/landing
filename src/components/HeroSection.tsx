@@ -47,8 +47,13 @@ export default function HeroSection() {
                 {t('hero.titleHead')}
               </span>
             )}
-            {t('hero.title')}{" "}
-            {" "}{t('hero.titleEnd')}
+            {t('hero.title')}
+            {t('hero.titleHighlight') && (
+              <span className="bg-gradient-to-r from-sky-400 via-blue-500 to-indigo-600 bg-clip-text text-transparent">
+                {t('hero.titleHighlight')}
+              </span>
+            )}
+            {t('hero.titleEnd')}
           </motion.h1>
           
           <motion.p
